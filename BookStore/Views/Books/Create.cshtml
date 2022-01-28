@@ -1,0 +1,61 @@
+﻿@model BookStore.Models.Book
+    @*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<form>
+    @{ViewData["Title"] = "Details";}
+    <h1>Details.</h1>
+    <div>
+        <h4>Book</h4>
+        <hr />
+        <table>
+        <dl>
+            <dt>
+                @Html.DisplayNameFor(Obj => Obj.Title)
+            </dt>
+            <dd>
+                @Html.DisplayFor(Obj => Obj.Title)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Genre)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Genre)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Price)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Price)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.PublishDate)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.PublishDate)
+            </dd>
+            </table>
+        </dl>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>
+                        Authors
+
+                    </th>
+                </tr>
+            </thead>
+            
+        </table>
+    </div>
+    <hr />
+    <div>
+
+        <a asp-action="Create">CREATE</a>
+        <a asp-action="Index">Back to List</a>
+    </div>
+</form>
+
